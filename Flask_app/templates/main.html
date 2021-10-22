@@ -1,0 +1,109 @@
+<html>
+    <body bgcolor=#d4a3ae>
+
+        <center>
+
+        <h1> PREDICCIÓN DE CANTIDAD DE ACCIDENTES </h1><br>
+
+        <form action="{{ url_for('main') }}" method="POST">
+           <b>
+            Elegí una fecha :  <input type="datetime-local", name='fecha'> <br><br>
+            <label for="barrio">Elegī un barrio:</label>
+              <select id="barrio" name="barrio" style="width: 200px !important;">
+                <option value="" disabled selected>Seleccioná un barrio</option>
+                <option value="CHACARITA">CHACARITA</option>
+                <option value="PATERNAL">PATERNAL</option>
+                <option value="VILLA CRESPO">VILLA CRESPO</option>
+                <option value="VILLA DEL PARQUE">VILLA DEL PARQUE</option>
+                <option value="ALMAGRO">ALMAGRO</option>
+                <option value="CABALLITO">CABALLITO</option>
+                <option value="VILLA SANTA RITA">VILLA SANTA RITA</option>
+                <option value="MONTE CASTRO">MONTE CASTRO</option>
+                <option value="VILLA REAL">VILLA REAL</option>
+                <option value="FLORES">FLORES</option>
+                <option value="FLORESTA">FLORESTA</option>
+                <option value="CONSTITUCION">CONSTITUCION</option>
+                <option value="SAN CRISTOBAL">SAN CRISTOBAL</option>
+                <option value="BOEDO">BOEDO</option>
+                <option value="VELEZ SARSFIELD">VELEZ SARSFIELD</option>
+                <option value="VILLA LURO">VILLA LURO</option>
+                <option value="PARQUE PATRICIOS">PARQUE PATRICIOS</option>
+                <option value="MATADEROS">MATADEROS</option>
+                <option value="VILLA LUGANO">VILLA LUGANO</option>
+                <option value="SAN TELMO">SAN TELMO</option>
+                <option value="SAAVEDRA">SAAVEDRA</option>
+                <option value="COGHLAN">COGHLAN</option>
+                <option value="VILLA URQUIZA">VILLA URQUIZA</option>
+                <option value="COLEGIALES">COLEGIALES</option>
+                <option value="BALVANERA">BALVANERA</option>
+                <option value="VILLA GRAL. MITRE">VILLA GRAL. MITRE</option>
+                <option value="PARQUE CHAS">PARQUE CHAS</option>
+                <option value="AGRONOMIA">AGRONOMIA</option>
+                <option value="VILLA ORTUZAR">VILLA ORTUZAR</option>
+                <option value="BARRACAS">BARRACAS</option>
+                <option value="PARQUE AVELLANEDA">PARQUE AVELLANEDA</option>
+                <option value="PARQUE CHACABUCO">PARQUE CHACABUCO</option>
+                <option value="NUEVA POMPEYA">NUEVA POMPEYA</option>
+                <option value="PALERMO">PALERMO</option>
+                <option value="VILLA RIACHUELO">VILLA RIACHUELO</option>
+                <option value="VILLA SOLDATI">VILLA SOLDATI</option>
+                <option value="VILLA PUEYRREDON">VILLA PUEYRREDON</option>
+                <option value="VILLA DEVOTO">VILLA DEVOTO</option>
+                <option value="LINIERS">LINIERS</option>
+                <option value="VERSALLES">VERSALLES</option>
+                <option value="PUERTO MADERO">PUERTO MADERO</option>
+                <option value="MONSERRAT">MONSERRAT</option>
+                <option value="SAN NICOLAS">SAN NICOLAS</option>
+                <option value="BELGRANO">BELGRANO</option>
+                <option value="RECOLETA">RECOLETA</option>
+                <option value="RETIRO">RETIRO</option>
+                <option value="NUÑEZ">NUÑEZ</option>
+                <option value="BOCA">BOCA</option>
+              </select> <br><br>
+              <label for="clima">Cómo está el clima?:</label>
+                <select id="clima" name="clima" style="width: 150px !important;">
+                  <option value="" disabled selected>Seleccioná el estado del clima</option>
+                  <option value="Viento">Viento</option>
+                  <option value="Lluvia">Lluvia</option>
+                  <option value="Normal">Normal</option>
+                  <option value="Nublado">Nublado</option>
+                  <option value="Llovizna">Llovizna</option>
+                  <option value="Tormenta">Tormenta</option>
+                  <option value="Nieblina">Nieblina</option>
+                  <option value="Ceniza Volcánica">Ceniza Volcánica</option>
+                </select> <br><br><br><br>
+            <input type="submit" , value='predict!' >
+        </form>
+
+        <div class="result" align="center">
+    {% if result %}
+        {% for variable, value in original_input.items() %}
+            {% if variable == 'Barrio' %}
+              <b> {{ value }} </b><br>
+              <center><img src='../static/caba_new.jpg' style="max-height: 400px; max-width: 400px;" /> </center>
+            {% endif %}
+            <b>{{ variable }}</b> : {{ value }}<br>
+        {% endfor %}
+        <br>
+        <br> Cantidad de accidentes predichos
+           <p style="font-size:50px"> ==> {{ result }} <==</p>
+    {% endif %}
+
+    {% if result == 0 %}
+        {% for variable, value in original_input.items() %}
+            {% if variable == 'Barrio' %}
+              <b> {{ value }} </b><br>
+              <center><img src='../static/caba_new.jpg' style="max-height: 400px; max-width: 400px;" /> </center>
+            {% endif %}
+            <b>{{ variable }}</b> : {{ value }}<br>
+        {% endfor %}
+        <br>
+        <br> Cantidad de accidentes predichos
+           <p style="font-size:50px"> ==> {{ result }} <==</p>
+    {% endif %}
+</div>
+
+    </center>
+
+    </body>
+</html>

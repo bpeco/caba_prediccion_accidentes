@@ -1,3 +1,3 @@
-# Prediccion de accidentetes en CABA
+# Accident Prediction Model in Buenos Aires
 
-En el presente repositorio se encuentra el Trabajo Final Integrador del Grupo 7 en relación al curso de Data Science | Digital House.
+In this repository you will find the Final Integrating Project of Group 7 in relation to the Data Science course | Digital House.

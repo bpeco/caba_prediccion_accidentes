@@ -25,6 +25,7 @@ The idea of this project is to be able to predict the number of accidents that m
 In order to achieve this, a dataset that was obtained from the <a href="https://data.buenosaires.gob.ar/dataset/"> CABA </a> page was developed, along with other data obtained through a scrapping performed on the page <a href="https://www.wunderground.com/"> Wunderground </a>.
 
 `🦶🏼 What were the steps we followed?`
+
 <ul>
   <li> ✅    Data cleaning</li>
   <li> ✅    WebScrapping for the weather data</li>
@@ -33,8 +34,10 @@ In order to achieve this, a dataset that was obtained from the <a href="https://
 </ul>
 
 `🛫 How we deployed our model?`
+
 We developed a page where you could choose the time of day, the state of the weather and the neighborhood from which you wanted to know the number of accidents that could happen.
 
 `⏭️ Next steps?`
+
 There are many variables that, due to time and resources, we decided not to investigate and include them in the project. For example, the maximum speeds in each neighborhood, the number of unsignalized crossings, etc. These types of variables and others, it would be interesting to analyze their relationship with the possible occurrence or not of an accident.
 Moreover, a possible variation on this project could be trying to predict accidents in a smaller geographic unit than neighborhoods.

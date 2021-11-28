@@ -26,10 +26,10 @@ In order to achieve this, a dataset that was obtained from the <a href="https://
 
 `🦶🏼 What were the steps we followed?`
 <ul>
-  <li> ✅ Data cleaning</li>
-  <li> ✅ WebScrapping for the weather data</li>
-  <li> ✅ EDA </li>
-  <li> ✅ 2-step-stage to train our models </li>
+  <li> ✅  Data cleaning</li>
+  <li> ✅  WebScrapping for the weather data</li>
+  <li> ✅  EDA </li>
+  <li> ✅  2-step-stage to train our models </li>
 </ul>
 
 `🛫 How we deployed our model?`

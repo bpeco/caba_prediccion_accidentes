@@ -4,9 +4,9 @@
 In this repository you will find the Final Project of Group #7 in relation to the Data Science course | Digital House.
 
 The jupyter notebook's name is: "TRABAJO FINAL INTEGRADOR - GRUPO 7.ipynb"
-
+<hr>
 Note: the notebooks are commented in Spanish. I am currently working on translating them.
-
+<hr>
 In the meantime, I leave some general comments on:
 <ul>
   <li> 💡 What motivated this project?</li>
